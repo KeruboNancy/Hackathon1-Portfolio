@@ -14,17 +14,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const subtitle = document.querySelector('.hero-content p');
-    const text = "Crafting digital experiences with precision and passion";
-    let index = 0;
+const text = "Crafting digital experiences with precision and passion. Transforming ideas into seamless digital experiences with precision and creativity.";
+let index = 0;
 
-    function typeWriter() {
-        if (index < text.length) {
-            subtitle.innerHTML += text.charAt(index);
-            index++;
-            setTimeout(typeWriter, 50);
-        }
+function typeWriter() {
+    if (index < text.length) {
+        subtitle.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 50);
     }
-    typeWriter();
+}
+
+subtitle.textContent = ""; // Clear the text first
+typeWriter();
+
 
     const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
