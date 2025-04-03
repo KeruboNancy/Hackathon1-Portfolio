@@ -25,7 +25,7 @@ function typeWriter() {
     }
 }
 
-subtitle.textContent = ""; // Clear the text first
+subtitle.textContent = ""; 
 typeWriter();
 
 
